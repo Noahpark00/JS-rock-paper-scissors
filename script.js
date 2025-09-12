@@ -11,4 +11,20 @@ function getCompChoice(){
     return choice;
 }
 
-console.log(getCompChoice())
+function getPlayerChoice(){
+    let choice = prompt("1.Rock | 2.Paper | 3.Scissors")
+    let player = "none"
+
+    if(choice == 1){
+        player = "rock"
+    } 
+    if(choice == 2){
+        player = "paper"
+    }
+    if(choice == 3){
+        player = "scissors"
+    }
+
+    return player
+}
+
