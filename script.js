@@ -83,9 +83,24 @@ function getPlayerChoice(){
     if(playerChoice == 'none'){
         compScore += 1
         console.log("You didn't even choose one, YOU LOSE!")
-        onsole.log("Player score: ", playerScore, "| Computer score: ", compScore)
+        console.log("Player score: ", playerScore, "| Computer score: ", compScore)
     }
  }
 
- 
+ function playGame(){
+    for(i = 0; i < 5; i++){
+        let humanChoice = getPlayerChoice()
+        let cpuChoice = getCompChoice()
+        playRound(humanChoice, cpuChoice)
+    }
+    if(playerScore > compScore){
+        console.log("You won all the marbles... what do you want a prize or something?")
+    } else if(compScore > playerScore){
+        console.log("Dang, you really lost to a computer...")
+    } else{
+        console.log("A dead tie, the worst outcome... you basically lost")
+    }
+ }
+
+ playGame()
 
