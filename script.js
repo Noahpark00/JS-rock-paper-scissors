@@ -1,3 +1,6 @@
+let playerScore = 0
+let compScore = 0
+
 function getCompChoice(){
     let choice = ""
     let rand = Math.random()
@@ -27,4 +30,62 @@ function getPlayerChoice(){
 
     return player
 }
+
+ function playRound(playerChoice, compChoice){
+    if(playerChoice == 'rock'){
+        if(compChoice == 'rock'){
+            console.log("You both chose rock and the round is a tie... BORING!")
+            console.log("Player score: ", playerScore, "| Computer score: ", compScore)
+        }
+        if(compChoice == 'paper'){
+            compScore += 1
+            console.log("Computer chose paper, YOU LOSE!")
+            console.log("Player score: ", playerScore, "| Computer score: ", compScore)
+        }
+        if(compChoice == 'scissors'){
+            playerScore += 1
+            console.log("Computer chose scissors, YOU WIN!")
+            console.log("Player score: ", playerScore, "| Computer score: ", compScore)
+        }
+    }
+    if(playerChoice == 'paper'){
+        if(compChoice == 'rock'){
+            playerScore += 1
+            console.log("Computer chose rock, YOU WIN!")
+            console.log("Player score: ", playerScore, "| Computer score: ", compScore)
+        }
+        if(compChoice == 'paper'){
+            console.log("You both chose paper and the round is a tie... BORING")
+            console.log("Player score: ", playerScore, "| Computer score: ", compScore)
+        }
+        if(compChoice == 'scissors'){
+            compScore += 1
+            console.log("Computer chose scissors, YOU LOSE!")
+            console.log("Player score: ", playerScore, "| Computer score: ", compScore)
+        }
+    }
+    if(playerChoice == 'scissors'){
+        if(compChoice == 'rock'){
+            compScore += 1
+            console.log("Computer chose rock, YOU LOSE!")
+            console.log("Player score: ", playerScore, "| Computer score: ", compScore)
+        }
+        if(compChoice == 'paper'){
+            playerScore += 1
+            console.log("Computer chose paper, YOU WIN!")
+            console.log("Player score: ", playerScore, "| Computer score: ", compScore)
+        }
+        if(compChoice == 'scissors'){
+            console.log("You both chose scissors and the round is a tie... BORING")
+            console.log("Player score: ", playerScore, "| Computer score: ", compScore)
+        }
+    }
+    if(playerChoice == 'none'){
+        compScore += 1
+        console.log("You didn't even choose one, YOU LOSE!")
+        onsole.log("Player score: ", playerScore, "| Computer score: ", compScore)
+    }
+ }
+
+ 
 
