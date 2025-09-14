@@ -27,4 +27,6 @@ button{
 
 .text{
     font-size: larger;
+    margin-left: -40px;
+    margin-right:-40px;
 }
